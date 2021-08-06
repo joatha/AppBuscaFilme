@@ -21,9 +21,11 @@ Esta terceira versão está mais estável, levando em consideração que a mesma
 
 # Referências: 
 
-BULMA: https://bulma.io/
-<br>  
+BULMA: https://bulma.io/ 
+<br>
 EJS: https://ejs.co/
+<br>
+OMD API: https://www.omdbapi.com/
 
 
  ------------------------------------------------------------------------------------------------------------------------------------------------
