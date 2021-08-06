@@ -1,0 +1,249 @@
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<div class="displayAlinhamento"> 
+
+    <div class="card">
+        <div class="image">        
+            <h1 class="img" id="lancamentos"></h1>          
+        </div>
+        <div class="content">    
+            <h2  class="title" id="titulo" style="font-size: 15px;"></h2>                
+            <h2  class="sub-title"id="descricaos" style="font-size: 10px;"></h2>  
+        </div>
+    </div>
+
+    <div class="card2">
+        <div class="image">        
+            <h1 class="img" id="lancamentos2"></h1>          
+        </div>
+        <div class="content">    
+            <h2  class="title2" id="titulo2" style="font-size: 15px;"></h2>                
+            <h2  class="sub-title"id="descricaos2" style="font-size: 10px;"></h2>  
+        </div>
+    </div>
+
+    <div class="card3">
+        <div class="image">        
+            <h1 class="img" id="lancamentos3"></h1>          
+        </div>
+        <div class="content">    
+            <h2  class="title" id="titulo3" style="font-size: 15px;"></h2>                
+            <h2  class="sub-title"id="descricaos3" style="font-size: 10px;"></h2>  
+        </div>
+    </div>    
+</div>
+
+
+<script src="/js/lancamento.js"></script>
+<script src="/js/lancamento2.js"></script>
+<script src="/js/lancamento3.js"></script>
+
+<script>
+    $('.card').hover(function(){
+        if($(this).hasClass("active")){
+            $('.card .sub-title').slideUp(function(){
+                $('.card').removeClass("active");
+            });
+        }else{
+            $('.card').addClass("active");
+            $('.card .sub-title').stop().slideDown();
+        }
+    });
+
+    $('.card2').hover(function(){
+        if($(this).hasClass("active")){
+            $('.card2 .sub-title').slideUp(function(){
+                $('.card2').removeClass("active");
+            });
+        }else{
+            $('.card2').addClass("active");
+            $('.card2 .sub-title').stop().slideDown();
+        }
+    });
+
+    $('.card3').hover(function(){
+        if($(this).hasClass("active")){
+            $('.card3 .sub-title').slideUp(function(){
+                $('.card3').removeClass("active");
+            });
+        }else{
+            $('.card3').addClass("active");
+            $('.card3 .sub-title').stop().slideDown();
+        }
+    });
+
+
+
+</script>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+
+
+div .displayAlinhamento{
+   
+    display: flex;
+    justify-content: center;   
+ 
+  
+   
+}
+
+.card{
+    position: relative;
+    height: 470px;
+    width: 340px;
+    display: block;
+    background: white;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    transition: 0.4s linear;
+    border-radius: 2%; 
+   
+    
+}
+
+.card2{
+    position: relative;
+    height: 470px;
+    width: 340px;
+    display: block;
+    background: white;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    transition: 0.4s linear;
+    border-radius: 2%; 
+    margin-left: 50px;  
+  
+
+}
+
+.card2:hover{
+    box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+.card2 .image{ 
+    background: rgb(255, 255, 255);
+    height: 400px;
+    overflow: hidden;  
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 8%;
+    padding-left: 19%;
+
+}
+
+.card2.active .image .img{
+    opacity: 0.6;
+    transform: scale(1.1);   
+}
+
+.card2 .content{
+    position: absolute;
+    bottom: 0px;
+    background: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 30px;
+}
+
+.card3{
+    position: relative;
+    height: 470px;
+    width: 340px;
+    display: block;
+    background: white;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    transition: 0.4s linear;
+    border-radius: 2%; 
+    margin-left: 50px;  
+}
+
+.card3:hover{
+    box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+}
+
+.card3 .image{ 
+    background: rgb(255, 255, 255);
+    height: 400px;
+    overflow: hidden;  
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 8%;
+    padding-left: 19%;
+
+}
+
+.card3.active .image .img{
+    opacity: 0.6;
+    transform: scale(1.1);   
+}
+
+.card3 .content{
+    position: absolute;
+    bottom: 0px;
+    background: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 30px;
+}
+
+.card:hover{
+    box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+}
+.card .image{ 
+    background: rgb(255, 255, 255);
+    height: 400px;
+    overflow: hidden;  
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 8%;
+    padding-left: 19%;
+
+}
+.image .img{
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.card.active .image .img{
+    opacity: 0.6;
+    transform: scale(1.1);   
+}
+
+.card .content{
+    position: absolute;
+    bottom: 0px;
+    background: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 30px;
+}
+
+.content .title{
+    font-size: 24px;
+    font-weight: 600;
+    color:#333333 ;
+}
+
+.content .sub-title{
+    font-size: 18px;
+    font-weight: 500;
+    color: #e74c3c
+}
+
+.sub-title{
+    display: none;
+}
+
+
+</style>
